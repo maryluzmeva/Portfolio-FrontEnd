@@ -120,39 +120,6 @@ section {
   padding: 15px;
 }
 
-/*grid layout-using Bootstrap*/
-
-.grid {
-  display: grid;
-  grid-gap: 64px;
-  place-items: center;
-}
-
-.grid-2-columns {
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 20px;
-  align-items: center;
-}
-
-.grid-2-columns p {
-  font-size: 18px;
-}
-
-.grid-2-columns a {
-  font-size: 16px;
-  font-family:var(--default-font-family);
-  font-weight:700px;
-  line-height: 1.5;
-  text-align: center;
-  color:var(--background-color);
-  text-transform: uppercase;
-  text-decoration: none;
-  background-color: var(--branding-color);
-  display:inline-block;
-  padding:16px 32px;
-  margin-top: 32px;
-  border-radius: 8px;
-}
 
 /*Content*/
 .content {
