@@ -3,7 +3,7 @@
   --secondary-color: #1f0318;
   --background-color: #f9f8f8;
   --heading-font-family: "Lora", serif;
-  --default-font-family: "Merriweather, serif";
+  --default-font-family: "Merriweather", serif;
 }
 
 /*General styling*/
@@ -38,7 +38,7 @@ header h2 {
 }
 
 header h3 {
-  font-family:"Merriweather, sans-serif";
+  font-family:"Merriweather", sans-serif;
   font-size: 1.25rem;
   font-weight:900;
   line-height: 1.5;
@@ -103,7 +103,7 @@ section {
 .btn-branding {
   display:inline-block;
   font-family:var(--default-font-family);
-  font-size: 1rem;
+  font-size: 1rem; /*Is the same as 16px*/
   font-weight:700;
   line-height: 1.5;
   text-align: center;
@@ -111,9 +111,19 @@ section {
   text-decoration: none;
   padding:16px 32px;
   border-radius: 8px;
-  background-color: var(--branding-color);
-  color:var(--background-color);
   transition: all 150ms ease-in-out;
+ 
+  --bs-btn-color: var(--background-color);
+  --bs-btn-bg: var(--branding-color);
+  --bs-btn-border-color: var(--branding-color);
+  
+  --bs-btn-hover-color: white;
+  --bs-btn-hover-bg: var(--secondary-color);
+  --bs-btn-hover-border-color: var(--secondary-color);
+
+  --bs-btn-active-color: white;
+  --bs-btn-active-bg: var(--secondary-color);
+  --bs-btn-active-border-color: var(--secondary-color);
 }
 
 .btn-branding:hover {
