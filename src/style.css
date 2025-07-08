@@ -221,7 +221,6 @@ section {
 }
 
 
-
 /*all the cards HOME and WORK html*/
 
 .card {
@@ -229,12 +228,24 @@ section {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
 }
-
+.card:hover {
+  transform: translateY(-10px);
+}
 /*Only the cards from WORK page*/
 .card-project {
   width: 100%;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  border: none;
+  
+}
+
+/*Scroll animations*/
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .card-body-project {
@@ -251,72 +262,61 @@ section {
   height: auto;
 }
 
-/*Media Queries for Medium-Large Screens*/
-@media (max-width: 960px) {
-  header {
-    padding:60px 20px;
-  }
-  header h1 {
-    font-size: 48px;
+/*Media Queries*/
+
+/*Medium devices (tablets, less than 992px)*/
+@media (max-width: 992px) {
+  header h1, .hero h1 {
+    font-size: 2.5rem;
   }
   header h2 {
-    font-size: 20px;
+    font-size: 1.25rem;
+  }
+  section {
+    padding: 60px 20px;
   }
   header h3 {
     font-size: 12px;
   }
-
-  .contact-me {
-    width: calc(50%-30px);
-  }
-  .card-group {
-    display: grid;
-    grid-template-columns: 1fr; /* Stack the cards vertically on small screens */
-    grid-gap: 20px;
-  }
-
-  .project-description {
-    padding: 60px 20px;
-  }
-
-  .hero-text {
-    font-size: 24px;
-    display: block;
-  }
-
-  .hero-text p{
-    font-size: 24px;
-    display: block;
+  .grid-2-columns {
+    grid-template-columns: 1fr;
+    gap:30px;
   }
 }
 
-/*Media Queries for mobile devices*/
+/*Mobile devices (landscape phones, less than 768px)*/
 
 @media (max-width: 768px) {
-  .grid-2-columns {
-    grid-template-columns: 1fr; /* Stack vertically */
-    text-align: center;
+  header h1, .hero h1 {
+    font-size: 2rem;
   }
-
   .img-responsive {
-    max-width: 60%;
-  } 
-
-  header h1 {
-    font-size: 24px;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
   }
 
-  header h2 {
-    font-size: 16px;
-  }
-
-  .btn-branding {
-    padding: 8px 16px;
-    font-size: 14px;
-  }
-  
-  .card {
-    margin-bottom: 20px;
+  .card-group {
+    grid-template-columns: 1fr;
   }
 }
 
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 576px) {
+  body {
+    padding-top: 60px
+  }
+  header h1, .hero h1 {
+    font-size: 1.8rem;
+  }
+  header h2 {
+    font-size: 1rem;
+  }
+  .btn-branding {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+  .contact-button {
+    font-size: 1rem;
+  }
+}
