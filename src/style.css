@@ -83,6 +83,21 @@ section {
   margin-bottom: 30px;
 }
 
+/*Social Media Icons in hero section*/
+.follow a {
+  color: var(--secondary-color); /* Dark and neutral color */
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.follow i {
+  font-size: 2.25rem; /* Big and consistent icon size to look better*/
+}
+
+.follow a:hover {
+  color: var(--branding-color); 
+}
+
 /*buttons*/
 
 .btn-branding {
